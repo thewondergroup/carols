@@ -16,7 +16,7 @@
 <meta http-equiv="Expires" content="0">
 <script>
 /* Fresh-version check: if version.json on the server is newer than this page, load the latest copy once. */
-(function(){var V="202611121037";try{
+(function(){var V="202611121307";try{
 fetch("version.json?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).then(function(d){
  if(!d||!d.version||d.version===V)return;
  var k="cabc-reloaded-"+d.version;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}
@@ -299,7 +299,7 @@ footer p{max-width:900px}
       <a href="#sponsor">Sponsor</a>
       <a href="#thanks">Past years</a>
       <a href="#contact">Contact</a>
-      <a class="btn btn-ghost nav-donate" href="https://www.justgiving.com/page/carols-against-blood-cancer?utm_medium=FA&amp;utm_source=CL" target="_blank" rel="noopener">Make a donation</a>
+      <a class="btn btn-ghost nav-donate" href="https://uk.emma-live.com/CABC26/pledge/1000010924" target="_blank" rel="noopener">Make a donation</a>
       <a class="btn btn-red" href="https://uk.emma-live.com/CABC26/tickets">Buy tickets</a>
     </nav>
   </div>
@@ -315,13 +315,13 @@ footer p{max-width:900px}
       <h1>Carols Against <em>Blood Cancer</em></h1>
       <p class="sub">Three hundred guests, a full choir, celebrity readers and the last carol, <em style="font-style:italic;color:var(--gold)">Hark the Herald Angels Sing</em>, sung by candlelight. One of Notting Hill's most-loved Christmas evenings returns.</p>
       <div class="when">
-        <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Monday 7 December 2026 · 6.15pm</div>
+        <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Monday 7 December 2026 · 6pm</div>
         <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>St John's Church, Lansdowne Crescent, Notting Hill, W11 2NN</div>
       </div>
       <div class="ctas">
         <a class="btn btn-red" href="https://uk.emma-live.com/CABC26/tickets">Buy tickets</a>
         <a class="btn btn-ghost" href="https://uk.emma-live.com/CABC26/tickets">Buy a family ticket</a>
-        <a class="btn btn-ghost" href="https://www.justgiving.com/page/carols-against-blood-cancer?utm_medium=FA&amp;utm_source=CL" target="_blank" rel="noopener">Make a donation</a>
+        <a class="btn btn-ghost" href="https://uk.emma-live.com/CABC26/pledge/1000010924" target="_blank" rel="noopener">Make a donation</a>
       </div>
       <div class="countdown" id="countdown" aria-label="Countdown to the carol service">
         <div><b id="cd-d"></b><span>Days</span></div>
@@ -378,7 +378,7 @@ footer p{max-width:900px}
         <p class="lead" style="margin-top:18px">A bar will be open both before and after the carols, serving champagne, wine, Negronis, and hot chocolate and marshmallows.</p><p class="lead" style="margin-top:14px">Matthew Harris's warm mince pies and sausage rolls will be served both before and after the carols, and to take home.</p>
       </div>
       <div class="reveal"><ol class="timeline">
-        <li><time>6.15pm</time><p>Doors open: the bar opens, serving drinks, mince pies and sausage rolls</p></li>
+        <li><time>6.00pm</time><p>Doors open: the bar opens, serving drinks, mince pies and sausage rolls</p></li>
         <li class="candle"><time>6.45pm</time><p>Service begins</p></li>
         <li><time>7.45pm</time><p>Service ends and the bar re-opens</p></li>
         <li><time>8.15pm</time><p>Evening ends</p></li>
@@ -568,11 +568,11 @@ footer p{max-width:900px}
 <section class="final">
   <div class="wrap reveal">
     <h2>Join us by candlelight</h2>
-    <p>Monday 7 December 2026 · St John's Church, Lansdowne Crescent, Notting Hill, W11 2NN · Doors open 6.15pm, evening ends 8.15pm</p>
+    <p>Monday 7 December 2026 · St John's Church, Lansdowne Crescent, Notting Hill, W11 2NN · Doors open 6pm, evening ends 8.15pm</p>
     <div class="ctas">
       <a class="btn btn-white" href="https://uk.emma-live.com/CABC26/tickets">Buy tickets</a>
       <a class="btn btn-ghost" href="https://uk.emma-live.com/CABC26/tickets">Buy a family ticket</a>
-      <a class="btn btn-ghost" href="https://www.justgiving.com/page/carols-against-blood-cancer?utm_medium=FA&amp;utm_source=CL" target="_blank" rel="noopener">Make a donation</a>
+      <a class="btn btn-ghost" href="https://uk.emma-live.com/CABC26/pledge/1000010924" target="_blank" rel="noopener">Make a donation</a>
     </div>
   </div>
 </section>
@@ -596,8 +596,8 @@ const onScroll=()=>nav.classList.toggle('solid',scrollY>40);onScroll();addEventL
 burger.onclick=()=>{const o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o)};
 document.querySelectorAll('#links a').forEach(a=>a.onclick=()=>nav.classList.remove('open'));
 
-// countdown (London time, 6.15pm GMT)
-const target=new Date('2026-12-07T18:15:00Z');
+// countdown (London time, 6pm GMT)
+const target=new Date('2026-12-07T18:00:00Z');
 function tick(){let s=Math.max(0,(target-new Date())/1000);
   document.getElementById('cd-d').textContent=Math.floor(s/86400);
   document.getElementById('cd-h').textContent=Math.floor(s%86400/3600);
