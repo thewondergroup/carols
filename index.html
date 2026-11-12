@@ -16,7 +16,7 @@
 <meta http-equiv="Expires" content="0">
 <script>
 /* Fresh-version check: if version.json on the server is newer than this page, load the latest copy once. */
-(function(){var V="202611121012";try{
+(function(){var V="202611121037";try{
 fetch("version.json?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).then(function(d){
  if(!d||!d.version||d.version===V)return;
  var k="cabc-reloaded-"+d.version;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}
@@ -67,13 +67,15 @@ section{padding:clamp(72px,10vw,128px) 0}
 .links a{color:#fff;text-decoration:none;font-size:15px;font-weight:500;opacity:.85}
 .links a:hover{opacity:1}
 .links .btn{opacity:1;padding:11px 20px;font-size:15px}
+.links .nav-donate{margin-right:-14px}
 .burger{display:none;background:none;border:0;color:#fff;width:44px;height:44px;cursor:pointer}
 .burger span{display:block;width:24px;height:2px;background:#fff;margin:5px auto;transition:.3s}
-@media(max-width:920px){
+@media(max-width:1120px){
   .burger{display:block}
   .links{position:fixed;inset:72px 0 auto;background:var(--plum);flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 24px;transform:translateY(-120%);transition:transform .35s;z-index:-1}
   .links a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:18px}
   .links .btn{margin-top:16px;justify-content:center;border:0}
+  .links .nav-donate{margin-right:0;border:1.5px solid rgba(255,255,255,.5)}
   .nav.open .links{transform:none}
   .nav.open{background:var(--plum)}
 }
@@ -297,6 +299,7 @@ footer p{max-width:900px}
       <a href="#sponsor">Sponsor</a>
       <a href="#thanks">Past years</a>
       <a href="#contact">Contact</a>
+      <a class="btn btn-ghost nav-donate" href="https://www.justgiving.com/page/carols-against-blood-cancer?utm_medium=FA&amp;utm_source=CL" target="_blank" rel="noopener">Make a donation</a>
       <a class="btn btn-red" href="https://uk.emma-live.com/CABC26/tickets">Buy tickets</a>
     </nav>
   </div>
@@ -318,7 +321,7 @@ footer p{max-width:900px}
       <div class="ctas">
         <a class="btn btn-red" href="https://uk.emma-live.com/CABC26/tickets">Buy tickets</a>
         <a class="btn btn-ghost" href="https://uk.emma-live.com/CABC26/tickets">Buy a family ticket</a>
-        <a class="btn btn-ghost" href="https://uk.emma-live.com/CABC26/pledge">Make a donation</a>
+        <a class="btn btn-ghost" href="https://www.justgiving.com/page/carols-against-blood-cancer?utm_medium=FA&amp;utm_source=CL" target="_blank" rel="noopener">Make a donation</a>
       </div>
       <div class="countdown" id="countdown" aria-label="Countdown to the carol service">
         <div><b id="cd-d"></b><span>Days</span></div>
@@ -569,7 +572,7 @@ footer p{max-width:900px}
     <div class="ctas">
       <a class="btn btn-white" href="https://uk.emma-live.com/CABC26/tickets">Buy tickets</a>
       <a class="btn btn-ghost" href="https://uk.emma-live.com/CABC26/tickets">Buy a family ticket</a>
-      <a class="btn btn-ghost" href="https://uk.emma-live.com/CABC26/pledge">Make a donation</a>
+      <a class="btn btn-ghost" href="https://www.justgiving.com/page/carols-against-blood-cancer?utm_medium=FA&amp;utm_source=CL" target="_blank" rel="noopener">Make a donation</a>
     </div>
   </div>
 </section>
